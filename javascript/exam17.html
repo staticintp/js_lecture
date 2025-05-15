@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		background-color : red;
+		width: 200px;
+		height: 200px;
+		}
+		
+</style>
+<script>
+	let sub = window.open("","","width=400,height=300")
+	if(!sub) {
+		alert('팝업창 옵션을 체크하세요!')
+	}
+	sub.moveTo(150,150)
+	
+	setInterval(function() {
+		sub,moveBy(50,50) }, 1000)
+		
+	setTimeout(function() {
+		sub,resizeTo(200,150)
+	},5000)
+	
+			
+</script>
+</head>
+<body>
+	<div style="color:red;"> 공 </div>
+	<div>공2</div>
+
+</body>
+</html>

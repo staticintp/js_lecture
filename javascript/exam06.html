@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let array=[10,20,30,40]
+	//shallow copy: let copyArray= array
+	
+	//deep copy 
+	let copyArray=[...array] //점 3개를 전개연산자라고 함. 
+	
+	/*
+	let copyArray=[]
+	comsole.log(copyArray)
+	for(let data of array){
+		copyArray.push(data)
+	}
+	*/
+	/*
+	for(let i =0;i<array.length;i++) {
+		copyArray[i]=array[i]
+	}
+	*/
+	
+	document.write(`array : ${array}<br>`)
+	document.write(`copyArray : ${copyArray}<br>`)
+	
+	copyArray[2]=1000
+	document.write(`array : ${array}<br>`)
+	document.write(`copyArray : ${copyArray}<br>`)
+</script>
+</head>
+<body>
+
+</body>
+</html>

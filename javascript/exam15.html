@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let array=[10,7,234,59,46]
+	
+	//array 배열의 모든 원소가 짝수인지 여부 판단
+	bool = true
+	for(element of array){
+		if(element%2!=0) {
+			bool=false
+			break
+		}
+	}
+	
+	/*
+	bool=array.every(function(element){
+		return element%2==0
+	})
+	
+	document.write('array배열의 모든 원소 짝수 여부: '+bool+'<br>')
+	
+	bool=array.some(function(element){
+		return element%2==1
+	})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	document.write('array배열의 홀수원소 짝수 여부: '+bool+'<br>')
+	*/
+	
+	
+	/*
+	let copyArray=[...array]
+	for(let i in copyArray)
+		copyArray[i]+=500
+	*/
+		
+	let copyArray= array.map(function(element) {
+		return element+500
+	})
+	
+	document.write(`array: ${array}<br>`)
+	document.write(`copyArray: ${copyArray}<br>`)
+	document.write(`sort()=>array: ${array}<br>`)
+	
+	document.write(`array: ${array}<br>`)
+	array.sort(function(left, right){
+		return left-right
+	})
+	document.write(`sort()=>array: ${array}<br>`)
+</script>
+</head>
+<body>
+
+</body>
+</html>
